@@ -1,0 +1,26 @@
+{
+  "env": {
+    "react-native/react-native": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint","react", "react-native", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 2,
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+  }
+}
