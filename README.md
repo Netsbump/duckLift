@@ -6,7 +6,7 @@
   <a href="https://github.com/VotreNomUtilisateurGitHub/DuckLift">
     <img src="chemin-vers-votre-logo-si-disponible" alt="Logo" width="80" height="80">
   </a>
-<h3 align="center">DuckLift : Application de club d'Haltérophilie</h3>
+<h3 align="center">DuckLift : Application de Club d'Haltérophilie</h3>
   <p align="center">
     Une application pour optimiser le suivi et la gestion de l'entraînement en haltérophilie.
     <br />
@@ -25,12 +25,9 @@
 <details>
   <summary>Table des Matières</summary>
   <ol>
-    <li><a href="#description-du-projet">Description du Projet</a></li>
-    <li><a href="#cahier-des-charges">Cahier des Charges</a></li>
-    <li><a href="#technologies-utilisees">Technologies Utilisées</a></li>
+    <li><a href="#description-du-projet">A propos du projet</a></li>
     <li><a href="#fonctionnalites">Fonctionnalités</a></li>
-    <li><a href="#developpement">Développement</a></li>
-    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#technologies-utilisees">Technologies Utilisées</a></li>
     <li><a href="#demarrage">Démarrage</a></li>
     <li><a href="#contribuer">Contribuer</a></li>
     <li><a href="#licence">Licence</a></li>
@@ -39,50 +36,14 @@
   </ol>
 </details>
 
-<!-- DESCRIPTION DU PROJET -->
+<!-- A PROPOS DU PROJET -->
 <p id="description-du-projet"></p>
 
-# Description du Projet
+# À propos du Projet
 
-DuckLift est une application mobile conçue pour simplifier et améliorer la visualisation et le suivi des programmes d'haltérophilie pour les membres de notre club. Cette application permet aux athlètes de consulter facilement leurs programmes, leurs progressions et de recevoir des annonces de l'entraîneur directement sur leur téléphone.
+DuckLift est une application mobile conçue pour optimiser le suivi et la gestion de l'entraînement en haltérophilie. Ce projet vise à fournir une solution intuitive pour les athlètes et entraîneurs, tout en consolidant mes compétences en développement logiciel.
 
-L'application vise également à enrichir ma maîtrise de certaines technologies en consolidant mes compétences existantes et en en explorant de nouvelles. (voir la partie <a href="#technologies-utilisees">Technologies Utilisées</a>)
-
-<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
-
-<!-- CAHIER DES CHARGES -->
-<p id="cahier-des-charge"></p>
-
-## Cahier des Charges
-
-1. **Définition des Besoins et User Stories**
-
-- [ ] Collecte des Exigences : Interaction avec les utilisateurs finaux pour comprendre leurs besoins.
-- [ ] Spécification des Fonctionnalités : Création de user stories et élaboration d'un backlog produit.
-
-2. **Conception de l'Architecture**
-
-- [ ] Définition de l'architecture système (client-serveur, microservices).
-- [ ] Conception préliminaire de la base de données et des modèles de données.
-- [ ] Définition des classes d'entités et application des principes SOLID pour une POO robuste.
-
-3. **Maquettes et Prototypage**
-
-- [ ] Développement de wireframes, de maquette et/ou de prototypes pour les interfaces utilisateur.
-
-<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
-
-<!-- TECHNOLOGIES UTILISEES -->
-<p id="technologies-utilisees"></p>
-
-## Technologies Utilisées
-
-- Front-End : React Native, TypeScript, Expo, Chakra UI, TanStack Query.
-- Back-End : .NET, Entity Framework Core, LINQ, Duende Identity Server.
-- Base de Données : PostgreSQL.
-- CI/CD : Docker, Docker Compose, GitHub Actions (Ou Jenkins).
-- Gestion de projet : Jira
-- Qualité du Code : Eslint, Prettier, SonarQube.
+Pour plus de détails, consultez le [Wiki du projet].
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
@@ -100,88 +61,17 @@ L'application vise également à enrichir ma maîtrise de certaines technologies
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
-<!-- DEVELOPPEMENT -->
-<p id="developpement"></p>
+<!-- TECHNOLOGIES UTILISEES -->
+<p id="technologies-utilisees"></p>
 
-## Développement
+## Technologies Utilisées
 
-### *Back-End .NET*
-  - Intégration des Design Patterns : Utilisation de modèles tels que Repository, Unit of Work, Singleton, et Factory pour structurer le code de manière efficace et maintenable.
-  - API et Logique Métier : Développement de l'API (RESTful) en .NET, implémentation de la logique métier, utilisation de LINQ pour les interactions avec la base de données.
-  - Authentification : Intégration de Duende Identity Server pour la gestion de l'authentification et de l'autorisation.
-
-
-### *Front-End React Native*
-
-  - Interface Utilisateur : Construction des vues en React Native, en utilisant des composants pour un design réactif et accessible.
-  - Intégration avec le Back-End : Connexion du front-end au back-end via les API RESTful.
-  - Accessibilité : RGAA 
-
-
-### *Tests*
-
-  - Tests Unitaires :  Utilisation des frameworks comme xUnit ou NUnit (pour le Back-end) et Jest ou React Testing Library pour les composants Front-End.
-  - Tests d'Intégration : Vérification de l'interaction entre différents modules et services.
-  - Tests E2E : Utilisation Playwright pour simuler des scénarios utilisateur complets
-
-
-### *Sécurité*
-
-  - Sécurité : Assurer la sécurité des données utilisateur et des communications entre le client et le serveur. Définition des méthodes et outils utilisés pour sécuriser l'application dans la documentation.
-  - Authentification / Autorisation : Intégration de Duende Identity Server pour l'authentification et l'autorisation.
-
-
-### *Performance*
-
-  - Techniques et outils utilisés pour le profiling et l'optimisation des performances.
-  - Approches pour assurer des temps de réponse rapides et une utilisation efficace des ressources.
-
-
-### *Déploiement*
-
-  - CI/CD : Mise en place d'un pipeline d'intégration continue et de déploiement continu avec GitHub Actions (ou Jenkins).
-  - Stratégies de Déploiement : Déployer l'application sur des plateformes cloud telles que Heroku, Vercel ou Netlify.
-
-
-### *Environnements de Staging et Production*
-
-  - Définition : L'environnement de staging, ou de préproduction, est une réplique exacte de l'environnement de production. Il est utilisé pour tester les codes, les mises à jour ou les nouvelles fonctionnalités dans des conditions presque identiques à celles de l'environnement de production.
-  - Objectif : Le but principal est de valider le logiciel dans un environnement qui simule étroitement le monde réel ou la production. Cela permet de détecter et de corriger les bugs, les problèmes de performance ou tout autre problème avant que le logiciel ne soit déployé en production.
-  - Tests : Les tests dans l'environnement de staging peuvent inclure des tests d'intégration, des tests de charge et de performance, et des tests d'acceptation utilisateur.
-
-
-### *Monitoring et Maintenance*
-
-- Surveillance et Logging
-
-  - [ ] Systèmes de monitoring et de logging mis en place.
-  - [ ] Stratégies pour surveiller la santé de l'application et détecter rapidement les problèmes.
-
-- Backups et Restauration
-
-  - [ ] Planification des sauvegardes de données.
-  - [ ] Procédures de restauration en cas de défaillance.
-
-<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
-
-<!-- DOCUMENTATION -->
-<p id="documentation"></p>
-
-## Documentation et Formation
-
-Cette section concerne la documentation technique et la formation des utilisateurs.
-Documentation Technique
-
-  Documentation de l'API avec Swagger/OpenAPI.
-  Documentation du code et des procédures opérationnelles.
-  Diagrammes d'architecture
-
-<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
-
-## Formation des Utilisateurs
-
-  Guides d'utilisation pour les utilisateurs finaux.
-  Screenshot, carrousel tour tuto
+- Front-End : React Native, TypeScript, Expo, Chakra UI, TanStack Query.
+- Back-End : .NET, Entity Framework Core, LINQ, Duende Identity Server.
+- Base de Données : PostgreSQL.
+- CI/CD : Docker, Docker Compose, GitHub Actions (Ou Jenkins).
+- Gestion de projet : Jira
+- Qualité du Code : Eslint, Prettier, SonarQube.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
