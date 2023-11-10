@@ -3,21 +3,24 @@
 <!-- LOGO DU PROJET -->
 <br />
 <div align="center">
-  <a href="https://github.com/VotreNomUtilisateurGitHub/DuckLift">
+  <a href="https://github.com/Netsbump/DuckLift">
     <img src="chemin-vers-votre-logo-si-disponible" alt="Logo" width="80" height="80">
   </a>
 <h3 align="center">DuckLift : Application de Club d'Haltérophilie</h3>
   <p align="center">
     Une application pour optimiser le suivi et la gestion de l'entraînement en haltérophilie.
     <br />
-    <a href="https://github.com/VotreNomUtilisateurGitHub/DuckLift"><strong>Explorer la documentation »</strong></a>
+    <br />
+    Pour plus de détails, vous pouvez 
+    <br />
+    <a href="https://github.com/Netsbump/duckLift/wiki"><strong>Explorer la documentation »</strong></a>
     <br />
     <br />
     <a href="votre-url-de-demo-si-disponible">Voir la Démonstration</a>
     ·
-    <a href="https://github.com/VotreNomUtilisateurGitHub/DuckLift/issues">Signaler un Bug</a>
+    <a href="https://github.com/Netsbump/DuckLift/issues">Signaler un Bug</a>
     ·
-    <a href="https://github.com/VotreNomUtilisateurGitHub/DuckLift/pulls">Demander une Fonctionnalité</a>
+    <a href="https://github.com/Netsbump/DuckLift/pulls">Demander une Fonctionnalité</a>
   </p>
 </div>
 
@@ -42,8 +45,6 @@
 # À propos du Projet
 
 DuckLift est une application mobile conçue pour optimiser le suivi et la gestion de l'entraînement en haltérophilie. Ce projet vise à fournir une solution intuitive pour les athlètes et entraîneurs, tout en consolidant mes compétences en développement logiciel.
-
-Pour plus de détails, consultez le [Wiki du projet].
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
