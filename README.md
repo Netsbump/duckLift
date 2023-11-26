@@ -24,6 +24,8 @@
   </p>
 </div>
 
+***
+
 <!-- TABLE DES MATIÈRES -->
 <details>
   <summary>Table des Matières</summary>
@@ -48,19 +50,30 @@ DuckLift est une application mobile conçue pour optimiser le suivi et la gestio
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
+***
+
 <!-- FONCTIONNALITES -->
 <p id="fonctionnalites"></p>
 
 ## Fonctionnalités
 
-  - Gestion des Athlètes : Profils détaillés, suivi des performances, planification des entraînements.
-  - Journal d'Entraînement : Enregistrement des exercices, des poids, et des répétitions.
-  - Tableau de Bord du Coach : Vue d'ensemble des performances et des progrès des athlètes.
-  - Notifications et Annonces : Système de notifications pour les mises à jour importantes.
-  - Calculateur de Charges : Outil pour calculer les charges optimales basées sur les pourcentages des maxima.
-  - Suivi de la Progression : Graphiques et visualisations pour suivre les progrès au fil du temps.
+- Journal d'Entraînement Personnalisé : Les athlètes peuvent visualiser la programmation quotidienne avec des détails sur les exercices, les pourcentages de travail et les répétitions.
+- Profil Athlète : Les utilisateurs créent et mettent à jour leur profil, y compris les informations de base et les statistiques de performance telles que le poids et la taille.
+- Gestion des Performances : Une page dédiée permet aux athlètes de saisir et de visualiser leurs maxima, avec un calculateur de charges pour personnaliser les programmes.
+- Tableau de Bord Coach : Les coachs ont accès à une interface de gestion pour accéder aux profils des athlètes, créer et publier des entraînements, et gérer une bibliothèque d'exercices.
+- Notifications et Annonces : Un système de notifications informe les utilisateurs des mises à jour importantes, avec des annonces et des messages de la part des coachs.
+- Réglages et Support : Les utilisateurs peuvent accéder aux réglages de l'application, y compris la gestion du compte, le changement de mot de passe, la FAQ et l'aide.
+
+## Fonctionnalités à Venir
+
+- Mode Hors Ligne : Permettant l'accès aux fonctionnalités essentielles même sans connexion internet.
+- Suivi de la Progression : Des graphiques et des visualisations pour un suivi détaillé des progrès.
+- Chat du Club : Une fonctionnalité de messagerie pour faciliter la communication entre les membres du club.
+- Personnalisation de l'Interface : Introduction d'un mode clair/sombre et options de choix de langue.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
+
+***
 
 <!-- TECHNOLOGIES UTILISEES -->
 <p id="technologies-utilisees"></p>
@@ -75,6 +88,8 @@ DuckLift est une application mobile conçue pour optimiser le suivi et la gestio
 - Qualité du Code : Eslint, Prettier, SonarQube.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
+
+***
 
 <!-- DEMARRAGE -->
 <p id="demarrage"></p>
@@ -138,6 +153,8 @@ Pour lancer le projet, utilisez :
 Cette commande démarre l'application front-end. Assurez-vous que tous les services nécessaires (comme les bases de données ou les serveurs backend) sont en cours d'exécution, soit localement, soit via Docker.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
+
+***
 
 <!-- CONTRIBUER -->
 <p id="contribuer"></p>
@@ -224,13 +241,17 @@ git push origin feature/NomDeVotreFonctionnalité
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
+***
+
 <!-- LICENCE -->
 <p id="licence"></p>
 
 ## Licence
 
-Distribué sous la Licence MIT. Voir le fichier LICENSE pour plus d'informations. A definir
+Distribué sous la Licence MIT. Voir le fichier LICENSE pour plus d'informations.
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
+
+***
 
 <!-- CONTACT -->
 <p id="contact"></p>
@@ -240,5 +261,4 @@ Distribué sous la Licence MIT. Voir le fichier LICENSE pour plus d'informations
 Twitter - [@votre_twitter] - email@example.com
 Linkedin 
 
-Lien du projet: https://github.com/VotreNomUtilisateurGitHub/DuckLift
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
