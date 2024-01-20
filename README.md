@@ -46,7 +46,7 @@
 
 # À propos du Projet
 
-DuckLift est une application mobile conçue pour optimiser le suivi et la gestion de l'entraînement en haltérophilie. Ce projet vise à fournir une solution intuitive pour les athlètes et entraîneurs, tout en consolidant mes compétences en développement logiciel.
+DuckLift est une application web et mobile conçue pour optimiser le suivi et la gestion de l'entraînement en haltérophilie. Ce projet vise à fournir une solution intuitive pour les athlètes et entraîneurs, tout en consolidant mes compétences en développement logiciel.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
@@ -80,11 +80,11 @@ DuckLift est une application mobile conçue pour optimiser le suivi et la gestio
 
 ## Technologies Utilisées
 
-- Front-End : React Native, TypeScript, Expo, Chakra UI, TanStack Query.
+- Front-End : React Native, React, React Router, TypeScript, Expo, Chakra UI, TanStack Query.
 - Back-End : .NET, Entity Framework Core, LINQ, Duende Identity Server.
 - Base de Données : PostgreSQL.
 - CI/CD : Docker, Docker Compose, GitHub Actions (Ou Jenkins).
-- Gestion de projet : Jira
+- Gestion de projet : Notion
 - Qualité du Code : Eslint, Prettier, SonarQube.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
@@ -111,10 +111,10 @@ Avant de commencer, assurez-vous d'avoir installé les logiciels suivants sur vo
 
 Suivez ces étapes pour installer et configurer le projet :
 
-  Cloner le dépôt Git :
+  Cloner le Fork du dépôt Git :
 
 ```bash
-git clone https://github.com/VotreNomUtilisateurGitHub/DuckLift.git
+git clone https://github.com/Netsbump/DuckLift.git
 ```
 
 Cela créera une copie locale du projet sur votre machine.
@@ -141,6 +141,12 @@ Si votre projet nécessite des services spécifiques comme une base de données 
 ```
 
 Cela lancera tous les services nécessaires définis dans votre fichier docker-compose.yml.
+
+Configurer l'environnement de développement local :
+Assurez-vous que votre environnement de développement est configuré pour utiliser des outils comme Eslint et Prettier. Cela aidera à maintenir la cohérence du code et à suivre les bonnes pratiques de développement.
+
+Configurer les variables d'environnement :
+Si votre projet nécessite des variables d'environnement, assurez-vous de les configurer correctement. Elles peuvent inclure des clés API, des configurations de base de données, etc. Pour des raisons de sécurité, ne les commitez jamais dans le dépôt.
 
 3. Exécution du projet
 
@@ -176,7 +182,7 @@ Après avoir forké le projet, clonez-le sur votre machine locale pour commencer
 
 
 ```bash
-git clone https://github.com/VotreGitHubUsername/DuckLift.git
+git clone https://github.com/Netsbump/DuckLift.git
 cd DuckLift
 ```
 
@@ -185,7 +191,7 @@ cd DuckLift
 Pour garder votre fork à jour avec le projet original, configurez un remote "upstream" pointant vers le dépôt d'origine.
 
 ```bash
-git remote add upstream https://github.com/VotreNomUtilisateurGitHub/DuckLift.git
+git remote add upstream https://github.com/Netsbump/DuckLift.git
 ```
 
 4. Créer une Branche de Fonctionnalité
@@ -199,6 +205,7 @@ git checkout -b feature/NomDeVotreFonctionnalité
 5. Faire des Changements
 
 Apportez vos modifications ou ajouts au code. Assurez-vous de respecter les conventions de codage et les bonnes pratiques du projet.
+
 6. Garder Votre Branche à Jour
 
 Avant de pousser vos changements, assurez-vous que votre branche est à jour avec la branche principale du projet original.
@@ -213,9 +220,16 @@ git rebase upstream/main
 
 Faites des commits clairs et significatifs. Chaque commit doit idéalement représenter une unité logique de changement.
 
+ Chaque commit doit idéalement représenter une unité logique de changement. Voici quelques bonnes pratiques pour les messages de commit :
+
+- Commencez le message par un type de changement comme feat, fix, docs, style, refactor, test, ou chore.
+- Utilisez le format type: sujet pour vos messages.
+- Le sujet ne doit pas dépasser 50 caractères, doit commencer par une majuscule et ne doit pas finir par un point.
+- Utilisez l'impératif présent, par exemple : "Ajoute" plutôt que "Ajouté".
+
 ```bash
 git add .
-git commit -m "Ajout d'une nouvelle fonctionnalité"
+git commit -m "feat: Ajoute une fonction de recherche avancée"
 ```
 
 8. Push Vers Votre Fork
