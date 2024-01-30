@@ -411,16 +411,16 @@ src/
 ├── components/
 │   ├── Button/
 │   │   ├── Button.tsx
-│   │   |── Button.styles.ts
-|   |   |── Button.stories.tsx # Storybook
+│   │   ├── Button.styles.ts
+|   |   ├──Button.stories.tsx # Storybook
 |   |   └── Button.test.tsx # Tests unitaires
 │   ├── Switch/
 │   │   ├── Switch.tsx
 │   │   └── Switch.styles.ts
 │   └── ...
-├── contexts/
-│   ├── AuthentificationContext.tsx
-│   ├── AuthorizationContext.tsx
+├── stores/
+│   ├── authStore.tsx
+│   ├── userStore.tsx
 │   └── ...
 ├── pages/
 │   ├── Login/
@@ -468,11 +468,11 @@ src/
    - Le fichier principal, par exemple `Button.tsx`, définit la logique et la vue du composant.
    - Les styles associés se trouvent soit dans un fichier `.styles.ts` pour le CSS-in-JS ou dans un fichier `.module.css` pour le CSS modulaire.
 
-3. contexts/ :
+3. stores/ :
 
-   - Contient les contextes React qui gèrent et fournissent qui gèrent et fournissent différentes sections de l'état global de l'application à travers des composants.
-   - Chaque fichier, comme `AuthentificationContext.tsx` ou `AuthorizationContext.tsx`, est un contexte isolé responsable de la gestion d'un certain type d'état dans l'application.
-   - Vous pouvez utiliser ces contextes pour accéder et manipuler l'état global sans avoir à faire passer les props à travers de multiples niveaux de composants.
+   - Gère l'état global de l'application en utilisant des bibliothèques comme Jotai ou Zustand.
+   - Chaque fichier, tel que `authStore.tsx` ou `userStore.tsx`, représente un magasin d'état distinct, responsable de la gestion d'un certain type d'état dans l'application.
+   - Ces stores permettent d'accéder et de manipuler l'état global de manière plus efficace et organisée, sans la nécessité de propager les props à travers de multiples niveaux de composants.
 
 4. pages/ :
 
