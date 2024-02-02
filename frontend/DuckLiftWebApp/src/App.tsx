@@ -1,38 +1,11 @@
-import "./App.css";
-import {
-  Button,
-  ChakraProvider,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Input,
-} from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/routes";
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <ChakraProvider>
-      <FormControl isRequired>
-        <FormLabel>Adresse Email</FormLabel>
-        <Input type="email" />
-        <FormHelperText>We &#39;ll never share your email.</FormHelperText>
-      </FormControl>
-
-      <FormControl isRequired>
-        <FormLabel>Mot de passe</FormLabel>
-        <Input type="password" />
-      </FormControl>
-
-      <Button
-        isLoading
-        loadingText="Chargement"
-        colorScheme="teal"
-        variant="outline"
-        spinnerPlacement="start"
-      >
-        Se Connecter
-      </Button>
+      <RouterProvider router={router} />
     </ChakraProvider>
   );
 };
-
-export default App;
