@@ -12,7 +12,7 @@
 
 ### ✨ Librairies
 
-- **React & TypeScript:** The foundation of this boilerplate. I'm diving into modern web development with React and bolstering my expertise through TypeScript.
+- **React & TypeScript:** The foundation of this project. I'm diving into modern web development with React and bolstering my expertise through TypeScript.
 - **Chakra UI:** I chose the MUI library for its sleek design and versatility. It's a great playground for enhancing my design sense and crafting user-friendly interfaces.
 - **Axios:** For seamless API integration. I'm using Axios to familiarize myself with best-practice API integration and to improve frontend-backend communication.
 - **React Router:** Routing is crucial in React apps. I'm learning to structure my application and provide smooth navigation with React Router.
@@ -447,7 +447,7 @@ src/
 |   ├── components.ts
 │   └── styles.ts
 │── styles/
-│   ├── global.css
+│   ├── index.css
 │   └── ...
 ├── utils/
 │   ├── formatDate.ts
@@ -508,7 +508,7 @@ src/
 
 8. styles/ :
 
-   - Contient les styles globaux et communs de l'application. `global.css` sert à définir des styles qui affectent toutes les pages, comme les styles de base ou les variables CSS et le reset CSS.
+   - Contient les styles globaux et communs de l'application. `index.css` sert à définir des styles qui affectent toutes les pages, comme les styles de base ou les variables CSS et le reset CSS.
 
 9. utils/ :
 
