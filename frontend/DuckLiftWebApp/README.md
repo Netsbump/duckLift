@@ -445,10 +445,7 @@ src/
 │── themes/
 │   ├── index.ts
 |   ├── components.ts
-│   └── styles.ts
-│── styles/
-│   ├── index.css
-│   └── ...
+│   └── theme.ts
 ├── utils/
 │   ├── formatDate.ts
 │   ├── validateEmail.ts
@@ -504,22 +501,18 @@ src/
    - Gère le theming global de l'application en utilisant une bibliothèque CSS-in-JS.
    - index.ts sert de point d'entrée pour le thème personnalisé et regroupe les configurations du thème.
    - components.ts contient les styles personnalisés pour les composants Chakra UI ou autres composants de la bibliothèque utilisée.
-   - styles.ts inclut les configurations de style globales spécifiques au thème, comme les couleurs, les tailles de police, etc.
+   - theme.ts inclut les configurations de style globales spécifiques au thème, comme les couleurs, les tailles de police, etc.
 
-8. styles/ :
-
-   - Contient les styles globaux et communs de l'application. `index.css` sert à définir des styles qui affectent toutes les pages, comme les styles de base ou les variables CSS et le reset CSS.
-
-9. utils/ :
+8. utils/ :
 
    - Regroupe les fonctions utilitaires qui peuvent être utilisées à travers l'application.
    - Ces fonctions, par exemple `formatDate.ts`, offrent des solutions rapides à des problèmes courants, comme le formatage des dates.
 
-10. App.tsx :
+9. App.tsx :
 
-    - Le composant racine de l'application. Il peut intégrer des éléments tels que les fournisseurs de contexte globaux, une logique de routage et les composants principaux qui structurent l'application.
+   - Le composant racine de l'application. Il peut intégrer des éléments tels que les fournisseurs de contexte globaux, une logique de routage et les composants principaux qui structurent l'application.
 
-11. main.tsx :
+10. main.tsx :
 
     - Point d'entrée de l'application, où l'application React est rendue dans le DOM. C'est ici que tout commence et où `App.tsx` est appelé.
 
