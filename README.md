@@ -160,7 +160,7 @@ Faites des commits clairs et significatifs. Chaque commit doit idéalement repr�
 
 - Commencez le message par un type de changement comme feat, fix, docs, style, refactor, test, ou chore.
 - Utilisez le format type: sujet pour vos messages.
-- Le sujet ne doit pas dépasser 50 caractères, doit commencer par une majuscule et ne doit pas finir par un point.
+- Le sujet ne doit pas dépasser 50 caractères.
 - Utilisez l'impératif présent, par exemple : "Ajoute" plutôt que "Ajouté".
 
 ```bash
@@ -178,16 +178,16 @@ git push origin feature/NomDeVotreFonctionnalité
 
 10. Ouvrir une Pull Request
 
-  Retournez sur le repository GitHub de DuckLift.
-  Vous verrez un bouton Compare & pull request. Cliquez dessus.
-  Remplissez une description claire et détaillée de vos changements.
-  Soumettez la pull request.
+  - Retournez sur le repository GitHub de DuckLift.
+  - Vous verrez un bouton Compare & pull request. Cliquez dessus.
+  - Remplissez une description claire et détaillée de vos changements.
+  - Soumettez la pull request.
 
 11. Bonnes Pratiques
 
-  Code propre et lisible : Assurez-vous que votre code est bien formaté et suit les conventions du projet.
-  Tests : Ajoutez des tests pour les nouvelles fonctionnalités ou les corrections de bugs.
-  Documentation : Mettez à jour le README et tout autre document nécessaire pour refléter vos changements.
+  - Code propre et lisible : Assurez-vous que votre code est bien formaté et suit les conventions du projet.
+  - Tests : Ajoutez des tests pour les nouvelles fonctionnalités ou les corrections de bugs.
+  - Documentation : Mettez à jour le README et tout autre document nécessaire pour refléter vos changements.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
