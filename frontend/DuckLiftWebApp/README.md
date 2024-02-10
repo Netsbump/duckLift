@@ -418,9 +418,8 @@ src/
 │   │   ├── Switch.tsx
 │   │   └── Switch.styles.ts
 │   └── ...
-├── stores/
-│   ├── authStore.tsx
-│   ├── userStore.tsx
+├── contexts/
+│   ├── Authentification.tsx
 │   └── ...
 ├── pages/
 │   ├── Login/
@@ -434,18 +433,28 @@ src/
 │   │   └── Profil.styles.ts
 │   └── ...
 ├── routes/
-│   ├── AppRoutes.tsx
-│   ├── ProtectedRoute.tsx
-│   ├── RedirectIfAuthenticatedRoute.tsx
+│   ├── routes.tsx
+│   ├── RouteGuard.tsx
 │   └── ...
 ├── services/
 │   ├── apiRoutes.tsx
 │   ├── authentificationService.tsx
 │   └── ...
+├── stores/
+│   ├── preferencesStore.tsx
+│   ├── userStore.tsx
+│   └── ...
+├── stories/
+│   ├── Button.stories.ts
+│   ├── Header.stories.ts
+│   └── ...
 │── themes/
 │   ├── index.ts
 |   ├── components.ts
 │   └── theme.ts
+├── types/
+│   ├── authTypes.ts
+│   └── ...
 ├── utils/
 │   ├── formatDate.ts
 │   ├── validateEmail.ts
@@ -465,11 +474,10 @@ src/
    - Le fichier principal, par exemple `Button.tsx`, définit la logique et la vue du composant.
    - Les styles associés se trouvent soit dans un fichier `.styles.ts` pour le CSS-in-JS ou dans un fichier `.module.css` pour le CSS modulaire.
 
-3. stores/ :
+3. contexts/ :
 
-   - Gère l'état global de l'application en utilisant des bibliothèques comme Jotai ou Zustand.
-   - Chaque fichier, tel que `authStore.tsx` ou `userStore.tsx`, représente un magasin d'état distinct, responsable de la gestion d'un certain type d'état dans l'application.
-   - Ces stores permettent d'accéder et de manipuler l'état global de manière plus efficace et organisée, sans la nécessité de propager les props à travers de multiples niveaux de composants.
+   - Contient les API contexts React qui gèrent et fournissent qui gèrent et fournissent différentes sections de l'état global de l'application à travers des composants.
+   - Chaque fichier, comme `AuthentificationContext.tsx` ou `AuthorizationContext.tsx`, est un contexte isolé responsable de la gestion d'un certain type d'état dans l'application.
 
 4. pages/ :
 
@@ -479,15 +487,11 @@ src/
 5. routes/ :
 
    - Centralise la définition et la configuration des routes dans l'application.
-   - `AppRoutes.tsx` : Ce fichier regroupe toutes les routes et sert de point d'entrée principal pour le routage dans l'application.
-   - `AuthenticatedRoute.tsx` : Ce composant est une couche d'abstraction au-dessus des routes nécessitant une authentification.
-     Il utilise le contexte AuthentificationContext pour vérifier si un utilisateur est authentifié pour accéder à une route spécifique.
+   - `routes.tsx` : Ce fichier regroupe toutes les routes et sert de point d'entrée principal pour le routage dans l'application.
+   - `RouteGuard.tsx` : Ce composant est une couche d'abstraction au-dessus des routes nécessitant une authentification.
+     Il utilise le contexte `AuthentificationContext.tsx` pour vérifier si un utilisateur est authentifié pour accéder à une route spécifique.
      Si un utilisateur non authentifié tente d'accéder à une route protégée, il est redirigé vers la page de connexion.
-   - `AuthorizedRoute.tsx` : Ce composant est une couche d'abstraction au-dessus des routes nécessitant une autorisation.
-     Il utilise le contexte AuthorizationContext pour vérifier si un utilisateur est autorisé à accéder à une route spécifique.
-     Si un utilisateur tente d'accéder à une route pour laquelle il n'a pas la permission, il est redirigé vers une page d'erreur (pour le moment, à nous d'implémenter un autre comportement).
-   - `RedirectIfAuthenticatedRoute.tsx` : Gère la redirection des utilisateurs qui sont déjà authentifiés mais qui tentent d'accéder à la page de connexion.
-     Si un utilisateur authentifié visite /login, il sera automatiquement redirigé vers la page d'accueil /.
+     Si un utilisateur déjà authentifié tente d'accéder à la page de connexion (/longin), il est redirigé vers la page home (/).
      Ce comportement sert principalement à éviter une nouvelle session ou connexion inutile pour un utilisateur déjà authentifié, en plus d'éliminer la redondance où un utilisateur authentifié serait renvoyé à la page de connexion
 
 6. services/ :
@@ -496,23 +500,41 @@ src/
    - Chaque fichier se concentre sur un domaine particulier. Par exemple, `apiRoutes.tsx` centralise toutes les URL d'appels API, tandis que `authentificationService.tsx` gère la logique spécifique à l'authentification (comme obtenir un token).
    - Ces services permettent de séparer la logique des données des composants, rendant le code plus propre et plus facile à gérer.
 
-7. themes/ :
+7. stores/ :
+
+   - Gère l'état global de l'application en utilisant des bibliothèques comme Jotai ou Zustand.
+   - Chaque fichier, tel que `preferencesStore.tsx` ou `userStore.tsx`, représente un magasin d'état distinct, responsable de la gestion d'un certain type d'état dans l'application.
+
+8. stories/ :
+
+   - Contient les fichiers Storybook pour chaque composant. Storybook est utilisé pour développer et tester les composants de manière isolée.
+   - Chaque fichier `.stories.tsx` correspond à un composant dans le dossier components/ et contient des scénarios de rendu pour différents états et variations du composant.
+   - Ces stories aident à visualiser et à interagir avec les composants dans différents états sans avoir besoin de les intégrer dans une page réelle, facilitant ainsi le développement et le test des composants UI.
+
+9. themes/ :
 
    - Gère le theming global de l'application en utilisant une bibliothèque CSS-in-JS.
    - index.ts sert de point d'entrée pour le thème personnalisé et regroupe les configurations du thème.
    - components.ts contient les styles personnalisés pour les composants Chakra UI ou autres composants de la bibliothèque utilisée.
    - theme.ts inclut les configurations de style globales spécifiques au thème, comme les couleurs, les tailles de police, etc.
 
-8. utils/ :
+10. types/ :
 
-   - Regroupe les fonctions utilitaires qui peuvent être utilisées à travers l'application.
-   - Ces fonctions, par exemple `formatDate.ts`, offrent des solutions rapides à des problèmes courants, comme le formatage des dates.
+    - Regroupe les déclarations de types et les interfaces TypeScript utilisées dans l'application.
+    - Ces types permettent de définir la structure des objets, les formats des réponses API, les props des composants et d'autres structures de données utilisées à travers l'application.
+    - Par exemple, `authTypes.ts` pourrait contenir des interfaces pour les données utilisateur, les réponses de l'API d'authentification et les props des composants liés à l'authentification.
+    - L'utilisation de ces types contribue à renforcer la sécurité de type dans l'application, à minimiser les erreurs de runtime et à améliorer la lisibilité et la maintenabilité du code.
 
-9. App.tsx :
+11. utils/ :
 
-   - Le composant racine de l'application. Il peut intégrer des éléments tels que les fournisseurs de contexte globaux, une logique de routage et les composants principaux qui structurent l'application.
+    - Regroupe les fonctions utilitaires qui peuvent être utilisées à travers l'application.
+    - Ces fonctions, par exemple `formatDate.ts`, offrent des solutions rapides à des problèmes courants, comme le formatage des dates.
 
-10. main.tsx :
+12. App.tsx :
+
+    - Le composant racine de l'application. Il peut intégrer des éléments tels que les fournisseurs de contexte globaux, une logique de routage et les composants principaux qui structurent l'application.
+
+13. main.tsx :
 
     - Point d'entrée de l'application, où l'application React est rendue dans le DOM. C'est ici que tout commence et où `App.tsx` est appelé.
 
