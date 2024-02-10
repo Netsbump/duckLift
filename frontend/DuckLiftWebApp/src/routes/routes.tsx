@@ -7,13 +7,17 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     element: (
-      <RouteGuard requireAuth={true}>
+      <RouteGuard>
         <Login />
       </RouteGuard>
     ),
   },
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <RouteGuard requireAuth={true}>
+        <Home />
+      </RouteGuard>
+    ),
   },
 ]);
