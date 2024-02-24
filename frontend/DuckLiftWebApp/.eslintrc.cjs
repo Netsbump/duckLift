@@ -21,8 +21,14 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn', // Avoid using 'any'.
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }], // Prefer .tsx extension for React files with JSX.
     'react/prop-types': 'off', // Disable prop-types as you're using TypeScript.
-    'react/jsx-props-no-spreading': 'warn', // Warn on props spreading.
+    //'react/jsx-props-no-spreading': 'warn', // Warn on props spreading.
     'prettier/prettier': 'error', // Report Prettier formatting errors as ESLint errors.
     'react/react-in-jsx-scope': 'off', // Disable as React 17+ doesn't require `React` to be in scope for JSX.
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ]
   },
 };
