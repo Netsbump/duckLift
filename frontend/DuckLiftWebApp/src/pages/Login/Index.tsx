@@ -53,9 +53,16 @@ export const Login: React.FC = () => {
   const handleClickShowPassword = () => setShow(!show);
 
   return (
-    <Grid minHeight={"inherit"} templateColumns="repeat(2, 1fr)">
-      <GridItem colSpan={1} bg="teal" />
-      <GridItem colSpan={1}>
+    <Grid
+      minHeight={"inherit"}
+      templateColumns={{ md: "repeat(2, 1fr)", base: "1fr" }}
+    >
+      <GridItem
+        colSpan={{ md: 1, base: 0 }}
+        bg="teal"
+        display={{ base: "none", md: "block" }}
+      />
+      <GridItem colSpan={{ md: 1, base: 1 }}>
         <VStack justifyContent="center" alignItems="center" height="100%">
           <VStack
             minHeight={"100%"}
@@ -182,19 +189,17 @@ export const Login: React.FC = () => {
               </Box>
 
               <VStack minWidth="100%">
-                <HStack marginTop={3} alignItems="center" width="100%">
+                <HStack marginTop={3} align="center" width="100%">
                   <Divider borderColor="gray.400" />
-                  <Box>
-                    <Text px={2} color="gray.500">
-                      ou
-                    </Text>
-                  </Box>
+                  <Text color="gray.500" mb={1}>
+                    ou
+                  </Text>
                   <Divider borderColor="gray.400" />
                 </HStack>
 
                 <Stack marginTop={3} alignSelf={"center"} width="100%">
                   <Button
-                    leftIcon={<EmailIcon />}
+                    leftIcon={<EmailIcon mt={1} />}
                     loadingText="Chargement"
                     variant="outline"
                   >
