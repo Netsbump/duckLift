@@ -18,13 +18,14 @@ import {
   GridItem,
   Box,
   Stack,
+  Divider,
 } from "@chakra-ui/react";
-import { useAuth } from "../contexts/Authentification";
+import { useAuth } from "../../contexts/Authentification";
 import { useNavigate, Link as ReactRouterLink } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import logo from "../assets/images/logo.webp";
+import { EmailIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import logo from "../../assets/images/weightlifting_logo.png";
 
 type TFormInput = {
   email: string;
@@ -53,7 +54,7 @@ export const Login: React.FC = () => {
 
   return (
     <Grid minHeight={"inherit"} templateColumns="repeat(2, 1fr)">
-      <GridItem colSpan={1} bg="papayawhip" />
+      <GridItem colSpan={1} bg="teal" />
       <GridItem colSpan={1}>
         <VStack justifyContent="center" alignItems="center" height="100%">
           <VStack
@@ -64,22 +65,32 @@ export const Login: React.FC = () => {
             padding={20}
           >
             <HStack>
-              <Text>Ducklift</Text>
-              <Image
-                boxSize={"48px"}
-                w="48px"
-                h="auto"
-                src={logo}
-                alt=""
-                loading="lazy"
-              />
+              <Box
+                p="1"
+                borderRadius="full"
+                border="2px solid"
+                borderColor="teal"
+                display="inline-block"
+              >
+                <Image
+                  boxSize={"24px"}
+                  w="24px"
+                  h="auto"
+                  src={logo}
+                  alt=""
+                  loading="lazy"
+                />
+              </Box>
+              <Text>DUCKLIFT</Text>
             </HStack>
 
-            <VStack>
+            <VStack alignItems={"flex-start"}>
               <Heading as="h1" size={"lg"}>
                 Connectez vous à Ducklift
               </Heading>
-              <Text>Connectez vous pour découvrir la vie de votre club.</Text>
+              <Text fontSize="sm" color="gray.500">
+                Connectez vous pour découvrir la vie de votre club.
+              </Text>
             </VStack>
 
             <VStack
@@ -88,20 +99,13 @@ export const Login: React.FC = () => {
               maxWidth={"400px"}
               alignItems={"flex-start"}
             >
-              <Box
-                as="form"
-                onSubmit={handleSubmit(onSubmit)}
-                autoComplete="off"
-                minWidth="100%"
-                maxWidth={"450px"}
-              >
+              <Box as="form" onSubmit={handleSubmit(onSubmit)} minWidth="100%">
                 <VStack spacing={4}>
                   <FormControl isInvalid={!!errors.email}>
                     <FormLabel htmlFor="email">Adresse Email</FormLabel>
                     <Input
                       id="email"
                       type="email"
-                      autoComplete="off"
                       placeholder="johndoe@example.co"
                       focusBorderColor="teal.500"
                       {...register("email", {
@@ -123,7 +127,7 @@ export const Login: React.FC = () => {
                       <Input
                         id="password"
                         type={show ? "text" : "password"}
-                        autoComplete="off"
+                        autoComplete="new-password"
                         focusBorderColor="teal.500"
                         placeholder="●●●●●●"
                         {...register("password", {
@@ -168,14 +172,51 @@ export const Login: React.FC = () => {
                     type="submit"
                     loadingText="Chargement"
                     colorScheme="teal"
-                    variant="outline"
+                    variant="solid"
                     spinnerPlacement="start"
                     isLoading={isSubmitting}
                   >
-                    Se Connecter
+                    Se connecter
                   </Button>
                 </Stack>
               </Box>
+
+              <VStack minWidth="100%">
+                <HStack marginTop={3} alignItems="center" width="100%">
+                  <Divider borderColor="gray.400" />
+                  <Box>
+                    <Text px={2} color="gray.500">
+                      ou
+                    </Text>
+                  </Box>
+                  <Divider borderColor="gray.400" />
+                </HStack>
+
+                <Stack marginTop={3} alignSelf={"center"} width="100%">
+                  <Button
+                    leftIcon={<EmailIcon />}
+                    loadingText="Chargement"
+                    variant="outline"
+                  >
+                    Se connecter avec Google
+                  </Button>
+                </Stack>
+
+                <Stack marginTop={5}>
+                  <Text fontSize="xs" color="gray.500" textAlign="center">
+                    Vous n&apos;avez pas encore de compte ?
+                    <ChakraLink
+                      color="teal.500"
+                      href="#"
+                      as={ReactRouterLink}
+                      to="/createAccount"
+                      marginLeft={1}
+                    >
+                      Créer un compte
+                    </ChakraLink>
+                  </Text>
+                </Stack>
+              </VStack>
             </VStack>
           </VStack>
         </VStack>
