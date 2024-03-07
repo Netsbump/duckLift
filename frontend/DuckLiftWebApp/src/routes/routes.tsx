@@ -25,19 +25,19 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "page-athletes",
+        path: "athletes",
         element: <Athletes />,
       },
       {
-        path: "page-exercises",
+        path: "exercises",
         element: <Exercices />,
       },
       {
-        path: "page-planning",
+        path: "planning",
         element: <Planning />,
       },
       {
-        path: "page-club",
+        path: "club",
         element: <Club />,
       },
     ],

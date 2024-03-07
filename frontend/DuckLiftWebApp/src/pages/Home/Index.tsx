@@ -5,7 +5,7 @@ import { TopBar } from "../../components/TopBar/TopBar";
 
 export const Home: React.FC = () => {
   return (
-    <HStack className="app-container" minHeight={"inherit"}>
+    <HStack className="app-container" minHeight={"inherit"} gap={0}>
       <SideNav />
 
       <VStack flex={1} spacing={0} width="100%" minHeight={"inherit"}>
