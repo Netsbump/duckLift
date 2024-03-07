@@ -1,3 +1,3 @@
 export const Club: React.FC = () => {
-  return <div>Page Club</div>;
+  return <div>Composant Club</div>;
 };
