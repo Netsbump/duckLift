@@ -6,7 +6,7 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import { User, AuthContextType } from "../types/authTypes";
+import { User, AuthContextType } from "@typing/authTypes";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 

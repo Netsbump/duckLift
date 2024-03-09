@@ -11,7 +11,7 @@ import {
   Button,
   Stack,
 } from "@chakra-ui/react";
-import { useAuth } from "../../contexts/Authentification";
+import { useAuth } from "@contexts/Authentification";
 import { useLocation } from "react-router-dom";
 
 export const TopBar: React.FC = () => {

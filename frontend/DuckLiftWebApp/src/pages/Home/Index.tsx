@@ -1,7 +1,7 @@
 import { Box, VStack, HStack } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
-import { SideNav } from "../../components/SideNav";
-import { TopBar } from "../../components/TopBar/TopBar";
+import { SideNav } from "@components/SideNav";
+import { TopBar } from "@components/TopBar/TopBar";
 
 export const Home: React.FC = () => {
   return (
