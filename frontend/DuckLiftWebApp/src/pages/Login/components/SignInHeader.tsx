@@ -1,15 +1,9 @@
-import { VStack, HStack, Box, Image, Heading, Text } from "@chakra-ui/react";
+import { HStack, Box, Image, Heading, Text, VStack } from "@chakra-ui/react";
 import logo from "@assets/images/weightlifting_logo.png";
 
-export const HeaderLogin: React.FC = () => {
+export const SignInHeader: React.FC = () => {
   return (
-    <VStack
-      minHeight={"100%"}
-      alignItems={"flex-start"}
-      justifyContent={"center"}
-      spacing={"30px"}
-      padding={20}
-    >
+    <>
       <HStack>
         <Box
           p="1"
@@ -30,12 +24,14 @@ export const HeaderLogin: React.FC = () => {
         <Text>DUCKLIFT</Text>
       </HStack>
 
-      <Heading as="h1" size={"lg"}>
-        Connectez vous à Ducklift
-      </Heading>
-      <Text fontSize="sm" color="gray.500">
-        Connectez vous pour découvrir la vie de votre club.
-      </Text>
-    </VStack>
+      <VStack alignItems={"flex-start"}>
+        <Heading as="h1" size={"lg"}>
+          Connectez vous à Ducklift
+        </Heading>
+        <Text fontSize="sm" color="gray.500">
+          Connectez vous pour découvrir la vie de votre club.
+        </Text>
+      </VStack>
+    </>
   );
 };
