@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Login } from "../pages/Login/Index";
-import { Home } from "../pages/Home/Index";
-import { RouteGuard } from "./RouteGuard";
-import { Athletes } from "../pages/Home/SubPages/Athletes";
-import { Exercices } from "../pages/Home/SubPages/Exercices";
-import { Planning } from "../pages/Home/SubPages/Planning";
-import { Club } from "../pages/Home/SubPages/Club";
+import { Login } from "@pages/Login/Index";
+import { Home } from "@pages/Home/Index";
+import { RouteGuard } from "@routes/RouteGuard";
+import { Athletes } from "@pages/Home/SubPages/Athletes";
+import { Exercices } from "@pages/Home/SubPages/Exercices";
+import { Planning } from "@pages/Home/SubPages/Planning";
+import { Club } from "@pages/Home/SubPages/Club";
 
 export const router = createBrowserRouter([
   {

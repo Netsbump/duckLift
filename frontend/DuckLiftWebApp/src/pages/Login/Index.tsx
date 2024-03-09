@@ -20,12 +20,12 @@ import {
   Stack,
   Divider,
 } from "@chakra-ui/react";
-import { useAuth } from "../../contexts/Authentification";
+import { useAuth } from "@contexts/Authentification";
 import { useNavigate, Link as ReactRouterLink } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import { EmailIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import logo from "../../assets/images/weightlifting_logo.png";
+import logo from "@assets/images/weightlifting_logo.png";
 
 type TFormInput = {
   email: string;
@@ -50,7 +50,7 @@ export const Login: React.FC = () => {
   };
 
   const [show, setShow] = useState(false);
-  const handleClickShowPassword = () => setShow(!show);
+  const handleClickShowPassword = (): void => setShow(!show);
 
   return (
     <Grid

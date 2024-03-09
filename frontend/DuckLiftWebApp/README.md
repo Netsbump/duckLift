@@ -13,11 +13,15 @@
 ### ✨ Librairies
 
 - **React & TypeScript:** The foundation of this project. I'm diving into modern web development with React and bolstering my expertise through TypeScript.
-- **Chakra UI:** I chose the MUI library for its sleek design and versatility. It's a great playground for enhancing my design sense and crafting user-friendly interfaces.
+- **Chakra UI:** I chose the Chakra UI library for its sleek design and versatility. It's a great playground for enhancing my design sense and crafting user-friendly interfaces.
 - **Axios:** For seamless API integration. I'm using Axios to familiarize myself with best-practice API integration and to improve frontend-backend communication.
 - **React Router:** Routing is crucial in React apps. I'm learning to structure my application and provide smooth navigation with React Router.
 - **ESLint & Prettier:** Discipline first! I've equipped myself with ESLint and Prettier to ensure I adhere to best practices, keep my code neat, and maintain consistency in my coding style.
 - **Vite.js:** Performance and rapid development in focus. I've adopted Vite.js to keep abreast of modern development tools and to enhance my development workflow's efficiency.
+- **Jest:** : Providing a comprehensive platform for unit and integration testing. With its capabilities for mocking, test coverage, and powerful assertions, Jest facilitates the validation of application logic and enhances the development experience. In combination with `@testing-library/react` for testing React components in a more idiomatic way and `@testing-library/jest-dom` to extend Jest's assertions with more DOM-specific matchers, this setup aims to ensure the application remains reliable and maintainable as it evolves.
+- **Vite-tsconfig-paths**: Streamlining imports. This plugin is a game-changer for managing complex directory structures. By leveraging TypeScript's path aliases, it simplifies imports across the project, making the codebase more navigable and reducing the overhead of managing long relative paths.
+- **Storybook**: Crafting components in isolation. Storybook serves as an essential tool in this project for building and testing UI components in isolation. It accelerates UI development, promotes component reuse, and ensures visual consistency across the application.
+- **React Hook Form** : Streamlined form management. React Hook Form is employed for its performance and minimal re-rendering, making form handling in React applications efficient and straightforward. It significantly simplifies form validation and data gathering, leading to an improved user experience.
 
 ### 🔴 Note
 

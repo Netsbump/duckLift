@@ -1,5 +1,5 @@
 import { VStack, HStack, Box, Image, Heading, Text } from "@chakra-ui/react";
-import logo from "../../../assets/images/weightlifting_logo.png";
+import logo from "@assets/images/weightlifting_logo.png";
 
 export const HeaderLogin: React.FC = () => {
   return (
