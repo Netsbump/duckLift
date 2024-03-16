@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Login } from "@pages/Login/Index";
-import { Home } from "@pages/Home/Index";
-import { RouteGuard } from "@routes/RouteGuard";
+import { Login } from "@pages/Login/Login";
+import { Home } from "@pages/Home/Home";
+import { RouteGuard } from "src/app/routes/RouteGuard";
 import { Athletes } from "@pages/Home/SubPages/Athletes";
 import { Exercices } from "@pages/Home/SubPages/Exercices";
 import { Planning } from "@pages/Home/SubPages/Planning";

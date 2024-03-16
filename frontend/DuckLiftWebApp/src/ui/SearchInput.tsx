@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 
-export const SearchInput = () => {
+export const SearchInput: React.FC = () => {
   return (
     <InputGroup>
       <InputLeftElement pointerEvents="none">
