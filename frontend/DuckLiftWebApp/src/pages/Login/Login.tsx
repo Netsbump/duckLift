@@ -1,10 +1,10 @@
 import { VStack, Grid, GridItem, Stack } from "@chakra-ui/react";
 
-import { SignInHeader } from "./components/SignInHeader";
-import { SignInForm } from "./components/SignInForm";
-import { CreateAccountLink } from "./components/CreateAccountLink";
-import { AuthProviderButton } from "./components/AuthProviderButton";
-import { DividerWithText } from "./components/DividerWithText";
+import { SignInHeader } from "@features/auth/components/SignInHeader";
+import { SignInForm } from "@features/auth/components/SignInForm";
+import { CreateAccountLink } from "@features/auth/components/CreateAccountLink";
+import { AuthProviderButton } from "@features/auth/components/AuthProviderButton";
+import { DividerWithText } from "@features/auth/components/DividerWithText";
 
 export const Login: React.FC = () => {
   return (

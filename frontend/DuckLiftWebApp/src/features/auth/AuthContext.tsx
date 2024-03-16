@@ -1,12 +1,11 @@
 import React, {
   createContext,
-  useContext,
   useState,
   ReactNode,
   useCallback,
   useMemo,
 } from "react";
-import { User, AuthContextType } from "@typing/authTypes";
+import { UserType, AuthContextType } from "src/features/auth/types/authTypes";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -15,12 +14,12 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<UserType | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(
     () => !!localStorage.getItem("token"),
   );
 
-  const login = useCallback((userInfo: User) => {
+  const login = useCallback((userInfo: UserType) => {
     const fakeToken = `fakeToken-${userInfo.email}-${userInfo.name}`;
     localStorage.setItem("token", fakeToken);
 
@@ -49,10 +48,4 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   );
 };
 
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
-  return context;
-};
+export { AuthContext };

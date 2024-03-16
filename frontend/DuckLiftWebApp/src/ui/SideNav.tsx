@@ -9,7 +9,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { Link as ReactRouterLink, useLocation } from "react-router-dom";
-import { SearchInput } from "@components/SearchInput";
+import { SearchInput } from "src/ui/SearchInput";
 import {
   Barbell,
   Calendar,

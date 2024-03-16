@@ -1,4 +1,4 @@
-import { useAuth } from "@contexts/Authentification";
+import { useAuth } from "@features/auth/hooks/useAuth";
 import { useNavigate, Link as ReactRouterLink } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";

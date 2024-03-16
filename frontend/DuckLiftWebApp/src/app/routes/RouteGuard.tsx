@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "@contexts/Authentification";
+import { useAuth } from "@features/auth/hooks/useAuth";
 import { useEffect } from "react";
 
 interface RouteGuardProps {

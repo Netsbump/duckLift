@@ -26,15 +26,18 @@
 
     /* Path mapping to allow for custom module paths */
     "paths": {
+      "@app/*": ["src/app/*"],
+      "@routes/*": ["src/app/routes/*"],
+      "@stores/*": ["src/app/stores/*"],
+      "@themes/*": ["src/app/themes/*"],
       "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@contexts/*": ["src/contexts/*"],
+      "@fonts/*": ["src/assets/fonts/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@features/*": ["src/features/*"],
       "@pages/*": ["src/pages/*"],
-      "@routes/*": ["src/routes/*"],
-      "@services/*": ["src/services/*"],
-      "@typing/*": ["src/typing/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@stories/*": ["src/stories/*"],
+      "@ui/*": ["src/ui/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["eslintrc.cjs", "src", "vite.config.ts"],

@@ -1,12 +1,12 @@
-export interface User {
+export interface UserType {
   id: number;
   name: string;
   email: string;
 }
 
 export interface AuthContextType {
-  user: User | null;
+  user: UserType | null;
   isAuthenticated: boolean;
-  login: (userInfo: User) => void;
+  login: (userInfo: UserType) => void;
   logout: () => void;
 }

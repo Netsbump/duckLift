@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import { describe, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { Login } from "./Index";
+import { Login } from "./Login";
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "@contexts/Authentification";
+import { AuthProvider } from "@features/auth/AuthContext";
 
 vi.mock("react-router-dom", async () => {
   const actualModule = await vi.importActual("react-router-dom");
