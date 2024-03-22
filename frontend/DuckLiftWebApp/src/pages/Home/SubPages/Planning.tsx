@@ -1,3 +1,3 @@
 export const Planning: React.FC = () => {
-  return <div>Composant Planning</div>;
+  return <div>Page Planning</div>;
 };
