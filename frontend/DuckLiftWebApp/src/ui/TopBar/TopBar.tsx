@@ -1,21 +1,12 @@
-import {
-  Avatar,
-  HStack,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuGroup,
-  MenuItem,
-  MenuList,
-  Text,
-  Button,
-  Stack,
-} from "@chakra-ui/react";
-import { useAuth } from "@features/auth/hooks/useAuth";
+import { HStack, useColorModeValue } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
+import { NamePageDisplayed } from "./NamePageDiplayed/NamePageDisplayed";
+import { NotificationButton } from "@features/notifications/components/NotificationButton";
+import { SwitchTheme } from "./SwitchTheme/SwitchTheme";
+import { ProfileAvatar } from "./Profile/ProfileAvatar";
 
 export const TopBar: React.FC = () => {
-  const { logout } = useAuth();
+  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
   const location = useLocation();
 
   const formatTitle = (pathname: string): string => {
@@ -26,11 +17,8 @@ export const TopBar: React.FC = () => {
       .join(" "); // Rassemble les parties avec un espace
   };
 
-  const pageTitle = formatTitle(location.pathname);
-
-  const handleLogout = (): void => {
-    logout();
-  };
+  let pageTitle = formatTitle(location.pathname);
+  if (pageTitle === "") pageTitle = "Tableau de bord";
 
   return (
     <HStack
@@ -38,34 +26,20 @@ export const TopBar: React.FC = () => {
       minH="60px"
       width="100%"
       justifyContent={"space-between"}
-      borderBottom={"solid 1px var(--chakra-colors-gray-200)"}
+      borderBottom={"solid 1px"}
+      borderColor={borderColor}
+      p={4}
     >
-      <Stack p={4}>
-        <Text>{pageTitle}</Text>
-      </Stack>
-
-      <Stack p={4}>
-        <Menu>
-          <MenuButton as={Button} colorScheme="teal">
-            Profile
-          </MenuButton>
-          <MenuList>
-            <MenuGroup title="Profile">
-              <MenuItem>
-                <Avatar size="sm" name="John Doe" />
-                <span>Mon Compte</span>
-              </MenuItem>
-              <MenuItem>Payments </MenuItem>
-            </MenuGroup>
-            <MenuDivider />
-            <MenuGroup title="Help">
-              <MenuItem>Docs</MenuItem>
-              <MenuItem>FAQ</MenuItem>
-              <MenuItem onClick={handleLogout}>Logout</MenuItem>
-            </MenuGroup>
-          </MenuList>
-        </Menu>
-      </Stack>
+      <NamePageDisplayed pageTitle={pageTitle} />
+      <HStack spacing={2}>
+        <HStack>
+          <SwitchTheme />
+          <NotificationButton />
+        </HStack>
+        <HStack>
+          <ProfileAvatar />
+        </HStack>
+      </HStack>
     </HStack>
   );
 };

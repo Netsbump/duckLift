@@ -30,7 +30,7 @@ export const Athletes: React.FC = () => {
 
   return (
     <div>
-      <h1>Composant Athletes</h1>
+      <h1>Page Athletes</h1>
       <select value={selectedOption} onChange={handleSelectChange}>
         <option value="">Sélectionnez une option</option>
         {options.map((option) => (

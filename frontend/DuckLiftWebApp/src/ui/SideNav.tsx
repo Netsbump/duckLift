@@ -31,7 +31,7 @@ const NavLink: React.FC<NavLinkProps> = ({ to, icon: Icon, children }) => {
   const { pathname } = useLocation();
   const isActive = pathname === to;
 
-  const activeBg = useColorModeValue("gray.100", "gray.700");
+  const activeBg = useColorModeValue("gray.200", "gray.700");
   const activeColor = useColorModeValue("teal.600", "teal.200");
 
   return (
@@ -76,11 +76,13 @@ export const SecondaryNav: React.FC = () => {
 };
 
 export const SideNav: React.FC = () => {
+  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
   return (
     <VStack
       minW="276px"
       minHeight={"inherit"}
-      borderRight={"solid 1px var(--chakra-colors-gray-200)"}
+      borderRight={"solid 1px"}
+      borderColor={borderColor}
       spacing={0}
       alignItems="stretch"
       paddingBottom={2}
