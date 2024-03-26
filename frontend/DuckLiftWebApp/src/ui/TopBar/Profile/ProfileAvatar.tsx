@@ -14,7 +14,7 @@ import {
 import { Gear, Question, SignOut, UserCircle } from "@phosphor-icons/react";
 import { useAuth } from "@features/auth/hooks/useAuth";
 import userDefaultImg from "@assets/images/userdefault.png";
-import { AlertDialogLogOut } from "@ui/AlertDialogLogOut";
+import { AlertDialogLogOut } from "@ui/TopBar/AlertDialogLogOut";
 export const ProfileAvatar: React.FC = () => {
   const { user } = useAuth();
 
