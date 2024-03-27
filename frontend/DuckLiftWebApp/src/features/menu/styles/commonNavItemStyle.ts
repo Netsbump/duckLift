@@ -1,6 +1,6 @@
-import { useColorModeValue } from "@chakra-ui/react";
+import { useColorModeValue, SystemStyleObject } from "@chakra-ui/react";
 
-export const useCommonNavItemStyle = () => {
+export const useCommonNavItemStyle = (): SystemStyleObject => {
   const activeBg = useColorModeValue("gray.200", "gray.700");
 
   return {

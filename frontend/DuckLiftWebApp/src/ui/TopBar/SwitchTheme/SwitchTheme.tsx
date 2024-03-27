@@ -6,6 +6,7 @@ import {
   Flex,
   Box,
   HStack,
+  Tooltip,
 } from "@chakra-ui/react";
 import { Sun, Moon } from "@phosphor-icons/react";
 
@@ -14,23 +15,32 @@ export const SwitchTheme: React.FC = () => {
 
   return (
     <FormControl display="flex" alignItems="center">
-      <Flex align="center">
-        <HStack>
-          <Box>
-            {colorMode === "light" ? <Sun size={20} /> : <Moon size={20} />}
-          </Box>
+      <Tooltip
+        label="Switch themes"
+        placement="bottom"
+        borderRadius="sm"
+        aria-label="tooltip switch theme mode"
+        openDelay={500}
+      >
+        <Flex align="center">
+          <HStack>
+            <Box>
+              {colorMode === "light" ? <Sun size={20} /> : <Moon size={20} />}
+            </Box>
 
-          <FormLabel htmlFor="theme-switch" mb="0" mr={2}>
-            {colorMode === "light" ? "Light" : "Dark"}
-          </FormLabel>
-        </HStack>
-        <Switch
-          id="theme-switch"
-          isChecked={colorMode === "dark"}
-          onChange={toggleColorMode}
-          colorScheme="teal" // Vous pouvez personnaliser la couleur du switch ici
-        />
-      </Flex>
+            <FormLabel htmlFor="theme-switch" mb="0" mr={2}>
+              {colorMode === "light" ? "Light" : "Dark"}
+            </FormLabel>
+          </HStack>
+
+          <Switch
+            id="theme-switch"
+            isChecked={colorMode === "dark"}
+            onChange={toggleColorMode}
+            colorScheme="teal"
+          />
+        </Flex>
+      </Tooltip>
     </FormControl>
   );
 };
