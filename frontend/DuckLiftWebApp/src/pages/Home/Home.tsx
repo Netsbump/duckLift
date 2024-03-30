@@ -11,7 +11,7 @@ export const Home: React.FC = () => {
       <VStack flex={1} spacing={0} width="100%" minHeight={"inherit"}>
         <TopBar />
 
-        <Box as="main" width="100%" flex={1} p={4}>
+        <Box as="main" width="100%" flex={1} py={4} px={8}>
           <Outlet />
         </Box>
       </VStack>
