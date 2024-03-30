@@ -1,12 +1,22 @@
-import { VStack, Grid, GridItem, Stack } from "@chakra-ui/react";
+import {
+  VStack,
+  Grid,
+  GridItem,
+  Stack,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 import { SignInHeader } from "@features/auth/components/SignInHeader";
 import { SignInForm } from "@features/auth/components/SignInForm";
 import { CreateAccountLink } from "@features/auth/components/CreateAccountLink";
 import { AuthProviderButton } from "@features/auth/components/AuthProviderButton";
 import { DividerWithText } from "@features/auth/components/DividerWithText";
+import bgImageLight from "@assets/images/LIGHT.svg";
+import bgImageDark from "@assets/images/DARK.svg";
 
 export const Login: React.FC = () => {
+  const bgImage = useColorModeValue(bgImageLight, bgImageDark);
   return (
     <Grid
       minHeight={"inherit"}
@@ -14,9 +24,22 @@ export const Login: React.FC = () => {
     >
       <GridItem
         colSpan={{ md: 1, base: 0 }}
-        bg="teal"
-        display={{ base: "none", md: "block" }}
-      />
+        bg="transparent"
+        display={{ base: "none", md: "flex" }}
+        overflow="hidden"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Image
+          width="100%"
+          height="700px" // Utilisez une hauteur spécifique si nécessaire, ou ajustez en fonction de votre layout
+          objectFit="contain"
+          src={bgImage}
+          alt="background image"
+          loading="lazy"
+        />
+      </GridItem>
+
       <GridItem colSpan={{ md: 1, base: 1 }}>
         <VStack justifyContent="center" alignItems="center" height="100%">
           <VStack
@@ -24,7 +47,6 @@ export const Login: React.FC = () => {
             alignItems={"flex-start"}
             justifyContent={"center"}
             spacing={"30px"}
-            padding={20}
           >
             <SignInHeader />
 

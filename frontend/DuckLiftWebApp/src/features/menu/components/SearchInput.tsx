@@ -15,7 +15,7 @@ type SearchInputProps = {
   isExpanded: boolean;
 };
 export const SearchInput: React.FC<SearchInputProps> = ({ isExpanded }) => {
-  const textColor = useColorModeValue("gray.50", "whiteAlpha.900");
+  const textColor = useColorModeValue("gray.500", "whiteAlpha.900");
   const placeholderColor = useColorModeValue("gray.400", "whiteAlpha.800");
   const iconColor = useColorModeValue("gray.600", "whiteAlpha.900");
   const inputBackgroundColor = useColorModeValue("gray.50", "gray.700");
