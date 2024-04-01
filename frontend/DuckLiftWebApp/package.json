@@ -28,6 +28,7 @@
     "sort-by": "^0.0.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@storybook/addon-essentials": "^7.6.12",
     "@storybook/addon-interactions": "^7.6.12",
     "@storybook/addon-links": "^7.6.12",
