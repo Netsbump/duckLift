@@ -2,7 +2,7 @@ import { Box, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import { DetailPanelControls } from "@features/detailPanel/components/DetailPanelControls";
 
 type AthleteDetailProps = {
-  athleteId: number | null;
+  athleteId: string | null;
   onClose: () => void; // Ajoutez onClose ici
 };
 
@@ -26,9 +26,13 @@ export const AthleteDetail: React.FC<AthleteDetailProps> = ({
         <Text fontSize="xl">Sten Levasseur</Text>
         <Text>{athleteId}</Text>
         <Text>Age : </Text>
-        <Text>Catégorie : </Text>
-        <Text>Max : </Text>
+        <Text>Catégorie : -102kg</Text>
+        <Text>Date ajout</Text>
+        <Text>Max : Tableau avec tous les maxs sur plein exo</Text>
         <Text>Prochaine compétition :</Text>
+        <Text>Blessures :</Text>
+        <Text>Poids de corps :</Text>
+        <Text>Série : Débutant / Région ect...</Text>
         <Text>Blessures :</Text>
       </VStack>
     </Box>

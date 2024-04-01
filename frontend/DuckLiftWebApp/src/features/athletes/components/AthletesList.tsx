@@ -1,9 +1,6 @@
 import {
   Button,
   ButtonGroup,
-  Card,
-  CardBody,
-  CardFooter,
   Divider,
   HStack,
   Heading,
@@ -11,12 +8,15 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  Image,
   Stack,
   Text,
   VStack,
   useColorModeValue,
+  Box,
+  Grid,
+  useBreakpointValue,
 } from "@chakra-ui/react";
+
 import { SortByFilter } from "@features/filters/SortByFilter";
 import {
   List,
@@ -25,17 +25,27 @@ import {
   Funnel,
   Plus,
 } from "@phosphor-icons/react";
+
 import { useState } from "react";
+import { useAthletes } from "../hooks/useAthletes";
+import { AthleteCard } from "./AthleteCard";
 
 type AthletesListProps = {
-  onAthleteClick: (athleteId: number) => void;
+  onAthleteClick: (athleteId: string) => void;
 };
 
 export const AthletesList: React.FC<AthletesListProps> = ({
   onAthleteClick,
 }) => {
   const [view, setView] = useState("grid"); // Les valeurs possibles pourraient être 'list', 'compact', 'grid'
-  const [athleteId, setAthleteId] = useState(0);
+
+  const athletes = useAthletes();
+  const columns = useBreakpointValue({
+    base: "repeat(auto-fit, minmax(250px, 1fr))",
+    md: "repeat(auto-fit, minmax(250px, 1fr))",
+    lg: "repeat(auto-fit, minmax(250px, 1fr))",
+    xl: "repeat(auto-fit, minmax(250px, 1fr))",
+  });
   const textColor = useColorModeValue("gray.500", "whiteAlpha.900");
   const placeholderColor = useColorModeValue("gray.400", "whiteAlpha.800");
   const iconColor = useColorModeValue("gray.600", "whiteAlpha.900");
@@ -43,11 +53,6 @@ export const AthletesList: React.FC<AthletesListProps> = ({
 
   const handleViewChange = (newView: string): void => {
     setView(newView);
-  };
-
-  const handleClickAthlete = (athleteId: number) => {
-    setAthleteId(athleteId);
-    onAthleteClick(athleteId);
   };
 
   return (
@@ -96,7 +101,7 @@ export const AthletesList: React.FC<AthletesListProps> = ({
       <Divider mb={5} />
 
       <HStack justifyContent="space-between" pb={3}>
-        <Text>25 résultats</Text>
+        <Text>{athletes.length} résultats</Text>
         {/* Filtres et sélection de l'affichage */}
         <HStack justifyContent="space-between">
           <ButtonGroup isAttached variant="outline">
@@ -122,35 +127,18 @@ export const AthletesList: React.FC<AthletesListProps> = ({
         </HStack>
       </HStack>
 
-      <Card maxW="sm" variant="outline">
-        <CardBody>
-          <Image
-            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt="Green double couch with wooden legs"
-            borderRadius="lg"
-          />
-          <Stack mt="6" spacing="3">
-            <Heading size="md">Sten Levasseur</Heading>
-            <Text>{athleteId}</Text>
-            <Text>Athele de haut niveau blabla</Text>
-            <Text color="blue.600" fontSize="2xl">
-              24 ans
-            </Text>
-          </Stack>
-        </CardBody>
-        <Divider />
-        <CardFooter>
-          <ButtonGroup spacing="2">
-            <Button
-              variant="solid"
-              colorScheme="blue"
-              onClick={() => handleClickAthlete(1)}
-            >
-              Detail
-            </Button>
-          </ButtonGroup>
-        </CardFooter>
-      </Card>
+      <Box overflowY="auto" maxH="calc(100vh - 400px)" flex={1}>
+        {/* Ajustez 200px en fonction de la hauteur de votre en-tête et de tout autre contenu au-dessus de la grille */}
+        <Grid templateColumns={columns} gap={6}>
+          {athletes.map((athlete) => (
+            <AthleteCard
+              key={athlete.id}
+              athlete={athlete}
+              onAthleteClick={onAthleteClick}
+            />
+          ))}
+        </Grid>
+      </Box>
     </Stack>
   );
 };

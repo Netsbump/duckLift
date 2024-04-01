@@ -1,15 +1,15 @@
 import { Flex, useDisclosure } from "@chakra-ui/react";
-import { AthleteDetail } from "@features/athletes/AthleteDetail";
-import { AthletesList } from "@features/athletes/AthletesList";
+import { AthleteDetail } from "@features/athletes/components/AthleteDetail";
+import { AthletesList } from "@features/athletes/components/AthletesList";
 import { useState } from "react";
 
 export const Athletes: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [selectedAthleteId, setSelectedAthleteId] = useState<number | null>(
+  const [selectedAthleteId, setSelectedAthleteId] = useState<string | null>(
     null,
-  ); // Assurez-vous de définir le type Athlete correctement
+  );
 
-  const handleAthleteClick = (athleteId: number) => {
+  const handleAthleteClick = (athleteId: string) => {
     setSelectedAthleteId(athleteId);
     onOpen(); // Ouvrir le volet de détail
   };

@@ -27,6 +27,7 @@ const theme = extendTheme({
         margin: "0",
         minHeight: "100vh",
         width: "100%",
+        overflow: "hidden",
       },
       // Styles universels pour tous les éléments
       "*, *::before, *::after": {
