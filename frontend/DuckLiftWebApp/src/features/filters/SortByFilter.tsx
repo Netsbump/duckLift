@@ -147,17 +147,23 @@ export const SortByFilter: React.FC = () => {
             </HStack>
           </MenuItem>
         ))}
-        <Divider />
+
         {filteredOptions.length > 0 ? (
           selectedFilters.length > 0 && (
-            <MenuItem onClick={clearFilters} justifyContent="center">
-              <Text fontSize={"sm"}> Clear filters</Text>
-            </MenuItem>
+            <>
+              <Divider />
+              <MenuItem onClick={clearFilters} justifyContent="center">
+                <Text fontSize={"sm"}>Clear filters</Text>
+              </MenuItem>
+            </>
           )
         ) : (
-          <MenuItem justifyContent="center">
-            <Text fontSize={"sm"}>Aucun résultat trouvé</Text>
-          </MenuItem>
+          <>
+            <Divider />
+            <MenuItem justifyContent="center">
+              <Text fontSize={"sm"}>Aucun résultat trouvé</Text>
+            </MenuItem>
+          </>
         )}
       </MenuList>
     </Menu>
