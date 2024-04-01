@@ -5,13 +5,13 @@ import { TopBar } from "src/ui/TopBar/TopBar";
 
 export const Home: React.FC = () => {
   return (
-    <HStack className="app-container" minHeight={"inherit"} gap={0}>
+    <HStack className="app-container" minHeight="inherit" gap={0}>
       <SideBar />
 
-      <VStack flex={1} spacing={0} width="100%" minHeight={"inherit"}>
+      <VStack flex={1} spacing={0} width="full" minHeight="inherit">
         <TopBar />
 
-        <Box as="main" width="100%" flex={1} py={4} px={8}>
+        <Box as="main" width="full" display="flex" flex={1} px={4}>
           <Outlet />
         </Box>
       </VStack>
