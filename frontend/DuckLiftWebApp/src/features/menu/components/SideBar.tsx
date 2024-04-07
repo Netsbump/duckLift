@@ -8,20 +8,21 @@ import {
 } from "@chakra-ui/react";
 import { SearchInput } from "@features/menu/components/SearchInput";
 import { Circle, List } from "@phosphor-icons/react";
-import { useState } from "react";
+
 import { UtilityNav } from "./UtilityNav";
 import { MainNav } from "./MainNav";
 
-export const SideBar: React.FC = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
-  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
+type SideBarProps = {
+  isExpanded: boolean;
+  toggleNav: () => void;
+};
 
-  const toggleNav = (): void => setIsExpanded(!isExpanded);
+export const SideBar: React.FC<SideBarProps> = ({ isExpanded, toggleNav }) => {
+  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
 
   return (
     <VStack
-      width={isExpanded ? "276px" : "75px"}
-      minHeight="inherit"
+      height="100%"
       borderRight="solid 1px"
       borderColor={borderColor}
       spacing={0}
