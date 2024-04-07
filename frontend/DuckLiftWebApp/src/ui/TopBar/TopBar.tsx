@@ -23,7 +23,7 @@ export const TopBar: React.FC = () => {
   return (
     <HStack
       as="header"
-      minH="60px"
+      // minH="60px"
       width="100%"
       justifyContent={"space-between"}
       borderBottom={"solid 1px"}

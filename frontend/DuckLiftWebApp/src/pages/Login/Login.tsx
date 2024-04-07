@@ -19,8 +19,10 @@ export const Login: React.FC = () => {
   const bgImage = useColorModeValue(bgImageLight, bgImageDark);
   return (
     <Grid
-      minHeight={"inherit"}
       templateColumns={{ md: "repeat(2, 1fr)", base: "1fr" }}
+      minW="100%"
+      maxW="2xl"
+      height="100vh"
     >
       <GridItem
         colSpan={{ md: 1, base: 0 }}
@@ -32,7 +34,7 @@ export const Login: React.FC = () => {
       >
         <Image
           width="100%"
-          height="700px" // Utilisez une hauteur spécifique si nécessaire, ou ajustez en fonction de votre layout
+          height="700px"
           objectFit="contain"
           src={bgImage}
           alt="background image"
