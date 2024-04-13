@@ -27,4 +27,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           local-dir: ./frontend/DuckLiftWebApp/dist/
-          target: /public_html/ducklift/
+          server-dir: /public_html/ducklift/
