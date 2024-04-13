@@ -16,7 +16,7 @@
     <a href="https://github.com/Netsbump/duckLift/wiki"><strong>Explorer la documentation »</strong></a>
     <br />
     <br />
-    <a href="votre-url-de-demo-si-disponible">Voir la Démonstration</a>
+    <a href="https://ducklift.sten-lvs.com">Voir la Démonstration</a>
     ·
     <a href="https://github.com/Netsbump/DuckLift/issues">Signaler un Bug</a>
     ·
