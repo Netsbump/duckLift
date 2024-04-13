@@ -12,9 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Change directory
-        run: cd frontend/DuckLiftWebApp
-
       - name: Install dependencies
         run: npm install
         working-directory: ./frontend/DuckLiftWebApp

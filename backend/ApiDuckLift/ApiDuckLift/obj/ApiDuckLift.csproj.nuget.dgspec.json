@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Levas\\source\\repos\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj": {}
+    "C:\\Users\\Levas\\source\\repos\\DuckLift\\backend\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Levas\\source\\repos\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj": {
+    "C:\\Users\\Levas\\source\\repos\\DuckLift\\backend\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Levas\\source\\repos\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj",
+        "projectUniqueName": "C:\\Users\\Levas\\source\\repos\\DuckLift\\backend\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj",
         "projectName": "ApiDuckLift",
-        "projectPath": "C:\\Users\\Levas\\source\\repos\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj",
+        "projectPath": "C:\\Users\\Levas\\source\\repos\\DuckLift\\backend\\ApiDuckLift\\ApiDuckLift\\ApiDuckLift.csproj",
         "packagesPath": "C:\\Users\\Levas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Levas\\source\\repos\\ApiDuckLift\\ApiDuckLift\\obj\\",
+        "outputPath": "C:\\Users\\Levas\\source\\repos\\DuckLift\\backend\\ApiDuckLift\\ApiDuckLift\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Levas\\AppData\\Roaming\\NuGet\\NuGet.Config",
