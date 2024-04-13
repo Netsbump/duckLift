@@ -12,11 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Change directory
+        run: cd frontend/DuckLiftWebApp
+
       - name: Install dependencies
         run: npm install
+        working-directory: ./frontend/DuckLiftWebApp
 
       - name: Build
         run: npm run build
+        working-directory: ./frontend/DuckLiftWebApp
 
       - name: Upload to Server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
@@ -24,5 +29,5 @@ jobs:
           server: ${{ secrets.SERVER }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          local-dir: ./dist/
+          local-dir: ./frontend/DuckLiftWebApp/dist/
           target: /public_html/ducklift/
