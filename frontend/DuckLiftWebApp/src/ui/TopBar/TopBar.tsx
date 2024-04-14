@@ -1,6 +1,13 @@
-import { HStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  HStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
-import { NamePageDisplayed } from "./NamePageDiplayed/NamePageDisplayed";
+//import { NamePageDisplayed } from "./NamePageDiplayed/NamePageDisplayed";
 import { NotificationButton } from "@features/notifications/components/NotificationButton";
 import { SwitchTheme } from "./SwitchTheme/SwitchTheme";
 import { ProfileAvatar } from "./Profile/ProfileAvatar";
@@ -30,7 +37,17 @@ export const TopBar: React.FC = () => {
       borderColor={borderColor}
       p={4}
     >
-      <NamePageDisplayed pageTitle={pageTitle} />
+      {/* <NamePageDisplayed pageTitle={pageTitle} /> */}
+      <Breadcrumb pt="3" fontWeight="medium" fontSize="sm">
+        <BreadcrumbItem>
+          <BreadcrumbLink href="">{pageTitle}</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        {/* <BreadcrumbItem>
+          <BreadcrumbLink href="">Page 2</BreadcrumbLink>
+          <BreadcrumbSeparator />
+        </BreadcrumbItem> */}
+      </Breadcrumb>
       <HStack spacing={2}>
         <HStack>
           <SwitchTheme />
