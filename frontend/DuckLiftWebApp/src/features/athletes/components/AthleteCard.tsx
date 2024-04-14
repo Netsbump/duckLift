@@ -14,7 +14,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Athlete } from "../types/athletesTypes";
-import { DotsThreeVertical } from "@phosphor-icons/react";
+import {
+  DotsThreeVertical,
+  GenderFemale,
+  GenderMale,
+} from "@phosphor-icons/react";
 import { useState } from "react";
 
 type AthleteCardProps = {
@@ -68,11 +72,8 @@ export const AthleteCard: React.FC<AthleteCardProps> = ({
       </CardHeader>
 
       <CardBody px="4" py="0">
-        <Box display="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal" fontSize="2xs">
-            Cat -{athlete.categorie}
-          </Badge>
-          <Box
+        <HStack justify="center">
+          <Text
             color="gray.500"
             fontWeight="semibold"
             letterSpacing="wide"
@@ -80,11 +81,19 @@ export const AthleteCard: React.FC<AthleteCardProps> = ({
             textTransform="uppercase"
             ml="2"
           >
-            {athlete.level} &bull; {athlete.bodyWeight}kg
-          </Box>
-        </Box>
+            {athlete.level} &bull;
+          </Text>
+          <Badge borderRadius="full" px="2" colorScheme="pink" fontSize="2xs">
+            <Text>Cat -{athlete.categorie}</Text>
+          </Badge>
+          {athlete.sexCategorie === "male" ? (
+            <GenderMale size={16} />
+          ) : (
+            <GenderFemale size={16} />
+          )}
+        </HStack>
 
-        <HStack display="flex" justifyContent="space-between">
+        <HStack display="flex" justifyContent="space-evenly">
           <VStack spacing={0} gap={0}>
             <Text fontSize="sm">EP-J</Text>
             <Text color="blue.600" fontSize="md">
@@ -95,12 +104,6 @@ export const AthleteCard: React.FC<AthleteCardProps> = ({
             <Text fontSize="sm">ARR</Text>
             <Text color="green.600" fontSize="md">
               {athlete.maxArr}kg
-            </Text>
-          </VStack>
-          <VStack spacing={0} gap={0}>
-            <Text fontSize="sm">PC</Text>
-            <Text color="pink.600" fontSize="md">
-              {athlete.bodyWeight}kg
             </Text>
           </VStack>
           {/* <Box as="span" color="gray.600" fontSize="sm">

@@ -12,14 +12,27 @@ export const getFakeAthletes = (): Athlete[] => {
       id: faker.string.uuid(),
       name: faker.person.firstName(),
       lastname: faker.person.lastName(),
+      email: faker.internet.email(),
+      birthday: faker.date.birthdate(),
       dateCreation: faker.date.past(),
       avatar: faker.image.avatar(),
       age: faker.number.int({ min: 18, max: 60 }),
       maxArr: faker.number.int({ min: 50, max: 200 }),
       maxEpj: faker.number.int({ min: 50, max: 300 }),
       categorie: faker.helpers.arrayElement(["59kg", "71g", "95kg"]),
+      sexCategorie: faker.person.sexType(),
       level: faker.helpers.arrayElement(["Regional", "National", "Rookie"]),
       bodyWeight: faker.number.int({ min: 50, max: 120 }),
+      club: faker.helpers.arrayElement([
+        "Ultimate Factory Rezé",
+        "Crossfit Gravity",
+      ]),
+      country: faker.helpers.arrayElement([
+        "FRANCE",
+        "USA",
+        "CHINE",
+        "ESPAGNE",
+      ]),
     });
   }
 

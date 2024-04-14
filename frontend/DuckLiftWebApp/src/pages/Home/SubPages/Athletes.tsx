@@ -1,6 +1,6 @@
 import { Flex, useDisclosure } from "@chakra-ui/react";
 import { AthleteDetail } from "@features/athletes/components/AthleteDetail";
-import { AthletesList } from "@features/athletes/components/AthletesList";
+import { AthletesPanel } from "@features/athletes/components/AthletesPanel";
 import { useState } from "react";
 
 export const Athletes: React.FC = () => {
@@ -11,17 +11,17 @@ export const Athletes: React.FC = () => {
 
   const handleAthleteClick = (athleteId: string) => {
     setSelectedAthleteId(athleteId);
-    onOpen(); // Ouvrir le volet de détail
+    onOpen();
   };
 
   return (
-    <Flex flex={1}>
-      <AthletesList onAthleteClick={handleAthleteClick} />
+    <Flex flex={1} height="100%">
+      <AthletesPanel onAthleteClick={handleAthleteClick} />
 
       <Flex
-        w={isOpen ? "500px" : "0"} // Utilisez une ternaire pour contrôler la largeur
-        transition="width 0.3s" // Animation de la transition
-        overflow="hidden" // Cache le contenu qui déborde lors de la fermeture
+        w={isOpen ? "500px" : "0"}
+        transition="width 0.3s"
+        overflow="hidden"
       >
         {selectedAthleteId && (
           <AthleteDetail athleteId={selectedAthleteId} onClose={onClose} />

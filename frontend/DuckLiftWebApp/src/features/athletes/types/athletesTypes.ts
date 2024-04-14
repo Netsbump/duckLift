@@ -5,7 +5,11 @@ export type Athlete = {
   lastname: string;
   /** Firstname of the athlete */
   name: string;
-  /** Birthdate of the athlete */
+  /** Email of the athlete */
+  email: string;
+  /** Birthday of the athlete */
+  birthday: Date;
+  /** Date creatio of the athlete */
   dateCreation: Date;
   /** Avatar of the athlete */
   avatar?: string;
@@ -17,8 +21,14 @@ export type Athlete = {
   maxEpj?: number;
   /** Weight category of the Athlete */
   categorie?: string;
+  /** Sex category of the Athlete */
+  sexCategorie?: string;
   /** Competition level of the Athlete (regional, national, rookie) */
   level?: string;
   /** BodyWeight of the Athlete */
   bodyWeight?: number;
+  /** Club of the Athlete */
+  club?: string;
+  /** Country of the Athlete */
+  country?: string;
 };

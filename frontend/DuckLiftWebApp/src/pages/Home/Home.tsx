@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
       <GridItem as="header" area="header">
         <TopBar />
       </GridItem>
-      <GridItem as="main" area="main">
+      <GridItem as="main" area="main" overflowY="hidden">
         <Outlet />
       </GridItem>
     </Grid>
