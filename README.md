@@ -56,18 +56,18 @@ DuckLift est une application web et mobile conçue pour optimiser le suivi et la
 
 ## Fonctionnalités
 
-- Journal d'Entraînement Personnalisé : Les athlètes peuvent visualiser la programmation quotidienne avec des détails sur les exercices, les pourcentages de travail et les répétitions.
-- Profil Athlète : Les utilisateurs créent et mettent à jour leur profil, y compris les informations de base et les statistiques de performance telles que le poids et la taille.
-- Gestion des Performances : Une page dédiée permet aux athlètes de saisir et de visualiser leurs maxima, avec un calculateur de charges pour personnaliser les programmes.
-- Tableau de Bord Coach : Les coachs ont accès à une interface de gestion pour accéder aux profils des athlètes, créer et publier des entraînements, et gérer une bibliothèque d'exercices.
+- Gestion du profil : Les utilisateurs créent et mettent à jour leur profil, y compris les informations de base et les statistiques de performance telles que le poids et la taille.
+- Gestion des athlètes : Les coachs ont accès à une interface de gestion pour accéder aux profils des athlètes, créer et publier des entraînements, et gérer une bibliothèque d'exercices.
+- Gestion des entrainements : Les coachs ont accès à une interface de gestion pour créer et consulter une bibliothèque d'exercices, de blocs d'exercices et d'entrainements.
+- Calendrier d'entraînement personnalisé : Les athlètes peuvent visualiser la programmation quotidienne avec des détails sur les exercices, les pourcentages de travail et les répétitions.
+- Gestion des performances : Une page dédiée permet aux athlètes de saisir et de visualiser leurs maxima pour chaque exercice.
 - Notifications et Annonces : Un système de notifications informe les utilisateurs des mises à jour importantes, avec des annonces et des messages de la part des coachs.
 - Réglages et Support : Les utilisateurs peuvent accéder aux réglages de l'application, y compris la gestion du compte, le changement de mot de passe, la FAQ et l'aide.
 
 ## Fonctionnalités à Venir
 
-- Mode Hors Ligne : Permettant l'accès aux fonctionnalités essentielles même sans connexion internet.
 - Suivi de la Progression : Des graphiques et des visualisations pour un suivi détaillé des progrès.
-- Chat du Club : Une fonctionnalité de messagerie pour faciliter la communication entre les membres du club.
+- Mode Hors Ligne : Permettant l'accès aux fonctionnalités essentielles même sans connexion internet.
 - Personnalisation de l'Interface : Introduction d'un mode clair/sombre et options de choix de langue.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
@@ -79,12 +79,12 @@ DuckLift est une application web et mobile conçue pour optimiser le suivi et la
 
 ## Technologies Utilisées
 
-- Front-End : React Native, React, React Router, TypeScript, Expo, Chakra UI, TanStack Query.
-- Back-End : .NET, Entity Framework Core, LINQ, Duende Identity Server.
-- Base de Données : PostgreSQL.
-- CI/CD : Docker, Docker Compose, GitHub Actions (Ou Jenkins).
-- Gestion de projet : Notion
-- Qualité du Code : Eslint, Prettier, SonarQube.
+- Front-End : React Native, React, React Router, TypeScript, Expo, Chakra UI, TanStack Query
+- Back-End : Nest.js
+- Base de Données : PostgreSQL
+- CI/CD : Docker, Docker Compose, GitHub Actions
+- Gestion de projet : Notion, Wiki Github
+- Qualité du Code : Eslint, Prettier
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
