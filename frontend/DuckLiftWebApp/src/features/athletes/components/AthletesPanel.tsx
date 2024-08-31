@@ -147,7 +147,7 @@ export const AthletesPanel: React.FC<AthletesPanelProps> = ({
             <Divider
               orientation="vertical"
               height="2rem"
-              borderColor="gray.300"
+              borderColor="gray.400"
               mx=".3rem"
             />
             <Button

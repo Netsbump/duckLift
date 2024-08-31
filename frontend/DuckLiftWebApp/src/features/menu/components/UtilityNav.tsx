@@ -19,7 +19,7 @@ type UtilityNavProps = {
 export const UtilityNav: React.FC<UtilityNavProps> = ({ isExpanded }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navItemStyle = useCommonNavItemStyle();
-  const dividerColor = useColorModeValue("gray.300", "whiteAlpha.300");
+  const dividerColor = useColorModeValue("gray.400", "whiteAlpha.300");
 
   const handleSupportClick = (): void => {
     onOpen();

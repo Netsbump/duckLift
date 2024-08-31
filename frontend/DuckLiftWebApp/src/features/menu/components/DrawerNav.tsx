@@ -25,7 +25,7 @@ type DrawerNavProps = {
 };
 
 export const DrawerNav: React.FC<DrawerNavProps> = ({ isOpen, onClose }) => {
-  const dividerColor = useColorModeValue("gray.300", "whiteAlpha.300");
+  const dividerColor = useColorModeValue("gray.400", "whiteAlpha.300");
 
   return (
     <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="sm">

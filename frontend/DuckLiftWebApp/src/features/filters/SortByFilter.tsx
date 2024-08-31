@@ -85,7 +85,7 @@ export const SortByFilter: React.FC = () => {
             <Divider
               orientation="vertical"
               height="1rem"
-              borderColor="gray.300"
+              borderColor="gray.400"
               mx=".3rem"
             />
           )}
@@ -119,7 +119,7 @@ export const SortByFilter: React.FC = () => {
       <MenuList>
         <InputGroup variant="ghost">
           <InputLeftElement pointerEvents="none">
-            <SearchIcon color="gray.300" />
+            <SearchIcon color="gray.400" />
           </InputLeftElement>
           <Input
             placeholder="Trier"
