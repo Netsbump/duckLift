@@ -10,8 +10,7 @@ export const AthleteDetail: React.FC<AthleteDetailProps> = ({
   athleteId,
   onClose,
 }) => {
-  // Utilisez athleteId pour obtenir les détails de l'athlète depuis votre état ou contexte global
-  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
+  const borderColor = useColorModeValue("gray.500", "whiteAlpha.500");
   return (
     <Box
       pl="4"

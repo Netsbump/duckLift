@@ -18,7 +18,7 @@ type SideBarProps = {
 };
 
 export const SideBar: React.FC<SideBarProps> = ({ isExpanded, toggleNav }) => {
-  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
+  const borderColor = useColorModeValue("gray.400", "whiteAlpha.500");
 
   return (
     <VStack

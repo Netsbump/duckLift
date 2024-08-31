@@ -32,8 +32,8 @@ export const AthleteList: React.FC<AthleteListProps> = ({
 }) => {
   const [selectedLines, setSelectedLines] = useState<number[]>([]);
   const hoverBgColor = useColorModeValue("gray.50", "gray.600");
-  const selectedBgColor = useColorModeValue("gray.200", "gray.700");
-  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
+  const selectedBgColor = useColorModeValue("gray.400", "gray.700");
+  const borderColor = useColorModeValue("gray.400", "whiteAlpha.500");
 
   const handleClickAthlete = (event: React.MouseEvent, athleteId: string) => {
     event.stopPropagation();

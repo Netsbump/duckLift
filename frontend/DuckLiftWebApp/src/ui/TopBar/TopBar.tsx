@@ -13,7 +13,7 @@ import { SwitchTheme } from "./SwitchTheme/SwitchTheme";
 import { ProfileAvatar } from "./Profile/ProfileAvatar";
 
 export const TopBar: React.FC = () => {
-  const borderColor = useColorModeValue("gray.200", "whiteAlpha.500");
+  const borderColor = useColorModeValue("gray.400", "whiteAlpha.500");
   const location = useLocation();
 
   const formatTitle = (pathname: string): string => {

@@ -20,7 +20,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
   const { pathname } = useLocation();
   const isActive = pathname === to;
 
-  const activeBg = useColorModeValue("gray.200", "gray.700");
+  const activeBg = useColorModeValue("gray.400", "gray.700");
   const activeColor = useColorModeValue("teal.600", "teal.200");
   const navItemStyle = useCommonNavItemStyle();
 
