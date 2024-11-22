@@ -33,6 +33,7 @@
     <li><a href="#description-du-projet">A propos du projet</a></li>
     <li><a href="#fonctionnalites">Fonctionnalités</a></li>
     <li><a href="#technologies-utilisees">Technologies Utilisées</a></li>
+    <li><a href="#prerequis">Pré-requis</a></li>
     <li><a href="#licence">Licence</a></li>
     <li><a href="#contact">Contact</a></li>
     <!-- Ajoutez d'autres sections selon vos besoins -->
@@ -81,13 +82,57 @@ DuckLift est une application web conçue pour optimiser le suivi et la gestion d
 - Front-End : React, TypeScript, TanStack (Query + Router), ParkUI + PandaCSS
 - Back-End : Nest.js + MikroORM 
 - Base de Données : PostgreSQL
+- Recherche: Typesense
+- Cache: Redis
 - CI/CD : Docker, Docker Compose, GitHub Actions
 - Qualité du Code : Biome
-- Monorepo: Turbo
+- Monorepo: Turborepo
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 ***
+
+<!-- PRE-REQUIS -->
+<p id="prerequis"></p>
+
+## Pré-requis et Installation
+
+### Prérequis
+
+Assurez-vous d'avoir installé les éléments suivants avant de commencer :
+
+- **Node.js** : Version 20 ou supérieure.
+- **pnpm** : Gestionnaire de paquets (installer avec `npm install -g pnpm`).
+- **Docker** et **Docker Compose** : Pour l'exécution des services (Redis, PostgreSQL, Typesense, etc.).
+
+### Cloner le projet
+
+```bash
+git clone https://github.com/Netsbump/DuckLift.git
+cd DuckLift
+```
+
+### Installer les dépendances
+
+```bash
+pnpm install
+```
+
+### Lancer le projet (développement)
+
+Démarrer les services via Docker Compose :
+
+```bash
+docker-compose up -d
+```
+
+Démarrer le monorepo (backend + frontend + packages) :
+
+```bash
+    pnpm dev
+```
+
+<p align="right">(<a href="#readme-top">retour en haut/a>)</p>
 
 <!-- LICENCE -->
 <p id="licence"></p>
@@ -104,7 +149,7 @@ Distribué sous la Licence MIT. Voir le fichier LICENSE pour plus d'informations
 
 ## Contact
 
-Twitter - [@votre_twitter] - email@example.com
+Bluesky - [@mon_bluesky] - email@example.com
 Linkedin 
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
