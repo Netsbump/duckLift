@@ -44,7 +44,7 @@
 
 # À propos du Projet
 
-DuckLift est une application web et mobile conçue pour optimiser le suivi et la gestion de l'entraînement en haltérophilie. Ce projet vise à fournir une solution intuitive pour les athlètes et entraîneurs, tout en consolidant mes compétences en développement logiciel.
+DuckLift est une application web conçue pour optimiser le suivi et la gestion de l'entraînement en haltérophilie. Ce projet vise à fournir une solution intuitive pour les athlètes et entraîneurs, tout en consolidant mes compétences en développement logiciel.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
@@ -78,12 +78,12 @@ DuckLift est une application web et mobile conçue pour optimiser le suivi et la
 
 ## Technologies Utilisées
 
-- Front-End : React Native, React, React Router, TypeScript, Expo, Chakra UI, TanStack Query
-- Back-End : Nest.js
+- Front-End : React, TypeScript, TanStack (Query + Router), ParkUI + PandaCSS
+- Back-End : Nest.js + MikroORM 
 - Base de Données : PostgreSQL
 - CI/CD : Docker, Docker Compose, GitHub Actions
-- Gestion de projet : Notion, Wiki Github
-- Qualité du Code : Eslint, Prettier
+- Qualité du Code : Biome
+- Monorepo: Turbo
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
