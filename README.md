@@ -79,7 +79,7 @@ DuckLift est une application web conçue pour optimiser le suivi et la gestion d
 
 ## Technologies Utilisées
 
-- Front-End : React, TypeScript, TanStack (Query + Router), ParkUI + PandaCSS
+- Front-End : React, TypeScript, TanStack (Query + Router), Shadcn + Tailwind
 - Back-End : Nest.js + MikroORM 
 - Base de Données : PostgreSQL
 - Recherche: Typesense
