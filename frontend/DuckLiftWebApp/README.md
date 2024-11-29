@@ -13,10 +13,11 @@
 ### ✨ Librairies
 
 - **React & TypeScript**
-- **Park UI:**
-- **Panda CSS**
+- **Shadcn**
+- **Tailwind**
 - **Tanstack Router**
 - **Tanstack Query**
+- **Tanstack Start**
 - **Ky**
 - **Biome** 
 - **Vite.js**
@@ -31,6 +32,7 @@
 - **Motion**
 - **Lucide React**
 - **Zod**
+- **Ts-rest**
 
 </div>
 
